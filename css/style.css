@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 65.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #9BDCF8;
+  background: -webkit-linear-gradient(to bottom right, #9BDCF8 0%, #308DB6 100%);
+  background: -moz-linear-gradient(to bottom right, #9BDCF8 0%, #308DB6 100%);
+  background: linear-gradient(to bottom right, #9BDCF8 0%, #308DB6 100%);
+}
+
+.index {
+  overflow: scroll;
+}
+
+.nav {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.nav__heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+.nav__about {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+.search {
+  width: 100vw;
+  height: 10vh;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.search__input {
+  height: 3rem;
+  width: 12rem;
+  border: none;
+  border-radius: 5px;
+  color: #7e7e7e;
+  background: rgba(255, 255, 255, 0.8);
+  padding-left: 1rem;
+  margin-right: 1rem;
+}
+.search__btn {
+  height: 3rem;
+  width: 8rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: #308eb6d5;
+  margin-right: 1rem;
+}
+.search__refresh-btn {
+  height: 3rem;
+  width: 8rem;
+  border: none;
+  border-radius: 5px;
+  color: #7e7e7e;
+  background: #9BDCF8;
+  margin-right: 1rem;
+}
+
+.card-container {
+  height: 80vh;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
+}
+
+.card {
+  width: 35rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+.card__img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+.card__body {
+  width: 100%;
+  margin-top: 1rem;
+}
+.card__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-size: 1.5rem;
+}
+.card__p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+}
+
+.about {
+  display: none;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <title>News Api</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <nav class="nav">
+            <h1 class="nav__heading" id="home">API News</h1>
+            <p class="nav__about" id="aboutBtn">About</p>
+        </nav>
+
+        <div class="about" id="about">
+            <p>about</p>
+        </div>
+
+        <div class="index" id="index">
+            <div class="search">
+                <select class="search__input" id="selectCountry">
+                    <option value="">Country</option>
+                    <option value="&country=au&">Australia</option>
+                    <option value="&country=br&">Brazil</option>
+                    <option value="&country=ca&">Canada</option>
+                    <option value="&country=ch&">Switzerland</option>
+                    <option value="&country=cn&">China</option>
+                    <option value="&country=de&">Germany</option>
+                    <option value="&country=eg&">Egypt</option>
+                    <option value="&country=es&">Spain</option>
+                    <option value="&country=fr&">France</option>
+                    <option value="&country=gb&">United Kingdom</option>
+                    <option value="&country=gr&">Greece</option>
+                    <option value="&country=hk&">Hong Kong</option>
+                    <option value="&country=ie&">Ireland</option>
+                    <option value="&country=il&">Israel</option>
+                    <option value="&country=in&">India</option>
+                    <option value="&country=it&">Italy</option>
+                    <option value="&country=jp&">Japan</option>
+                    <option value="&country=nl&">Netherlands</option>
+                    <option value="&country=no&">Norway</option>
+                    <option value="&country=pe&">Peru</option>
+                    <option value="&country=ph&">Philippines</option>
+                    <option value="&country=pt&">Portugal</option>
+                    <option value="&country=ro&">Romania</option>
+                    <option value="&country=ru&">Russia</option>
+                    <option value="&country=se&">Sweden</option>
+                    <option value="&country=sg&">Singapore</option>
+                    <option value="&country=tw&">Taiwain</option>
+                    <option value="&country=ua&">Ukraine</option>
+                    <option value="&country=us&">United States</option>
+                </select>
+
+                <input class="search__input" id="searchTerm" type="text" placeholder="Keyword...">
+
+                <button class="search__btn" id="searchSubmit">Search</button>
+
+                <button class="search__refresh-btn" id="refresh">Refresh</button>
+            </div>
+    
+            <div class="card-container" id="cardContainer">
+                <!-- <div class="card" style="width: 18rem;">
+                    <img src="./honey-flower.png" class="card__img" alt="...">
+                    <div class="card__body">
+                        <h5 class="card__title">News story</h5>
+                        <p class="card__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab, reiciendis magni porro qui dicta vero eos iusto nemo tempora!</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        
+        
+        <!-- jquery cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- local script -->
+        <script src="./script.js"></script>
+    </body>
+</html>
