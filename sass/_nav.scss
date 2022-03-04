@@ -1,0 +1,19 @@
+.nav {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    &__heading {
+        @include heading;
+        cursor: pointer;
+    }
+
+    &__about {
+        @include p-text;
+        cursor: pointer;
+    }
+}

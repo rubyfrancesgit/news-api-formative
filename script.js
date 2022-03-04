@@ -34,17 +34,7 @@ function searchResults() {
                 for(let i = 0; i < data.articles.length; i++) {
                     console.log(data.articles[i].source.name)
                     let currentArticle = data.articles[i]
-                    $("#cardContainer").append(
-                        `
-                            <div class="card" style="width: 18rem;">
-                                <img src=${data.articles[i].image} class="card__img" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card__title">${data.articles[i].title}</h5>
-                                    <p class="card__p">${data.articles[i].publishedAt}</p>
-                                </div>
-                            </div>
-                        `
-                    );
+                    generateNewsCard(data, i);
                 }
     
             }
@@ -66,17 +56,7 @@ function searchResults() {
                 for(let i = 0; i < data.articles.length; i++) {
                     console.log(data.articles[i].source.name)
                     let currentArticle = data.articles[i]
-                    $("#cardContainer").append(
-                        `
-                            <div class="card" style="width: 18rem;">
-                                <img src=${data.articles[i].image} class="card__img" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card__title">${data.articles[i].title}</h5>
-                                    <p class="card__p">${data.articles[i].publishedAt}</p>
-                                </div>
-                            </div>
-                        `
-                    );
+                    generateNewsCard(data, i);
                 }
     
             }
@@ -99,17 +79,7 @@ function searchResults() {
                 for(let i = 0; i < data.articles.length; i++) {
                     console.log(data.articles[i].source.name)
                     let currentArticle = data.articles[i]
-                    $("#cardContainer").append(
-                        `
-                            <div class="card" style="width: 18rem;">
-                                <img src=${data.articles[i].image} class="card__img" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card__title">${data.articles[i].title}</h5>
-                                    <p class="card__p">${data.articles[i].publishedAt}</p>
-                                </div>
-                            </div>
-                        `
-                    );
+                    generateNewsCard(data, i);
                 }
     
             }
@@ -139,24 +109,29 @@ $.ajax({
         for(let i = 0; i < data.articles.length; i++) {
             console.log(data.articles[i].source.name)
             let currentArticle = data.articles[i]
-            $("#cardContainer").append(
-                `
-                    <div class="card" style="width: 18rem;">
-                        <img src=${data.articles[i].image} class="card__img" alt="...">
-                        <div class="card-body">
-                            <h5 class="card__title">${data.articles[i].title}</h5>
-                            <p class="card__p">${data.articles[i].publishedAt}</p>
-                        </div>
-                    </div>
-                `
-            );
+            generateNewsCard(data, i);
         }
 
     }
 });
 
+function generateNewsCard(data, i) {
+    $("#cardContainer").append(
+        `
+            <a class="card" style="width: 18rem;" href=${data.articles[i].url} target="_blank">
+                <img src=${data.articles[i].image} class="card__img" alt="...">
+                <div class="card-body">
+                    <h5 class="card__title">${data.articles[i].title}</h5>
+                    <p class="card__p">${data.articles[i].publishedAt}</p>
+                </div>
+            </a>
+        `
+    );
+}
+
 function refreshClicked() {
     document.getElementById("searchTerm").value = "";
+    document.getElementById("selectCountry").value = "";
 
     let url = `https://gnews.io/api/v4/top-headlines?token=ebdda3382888292a0c2931d963424f67`;
 
@@ -173,23 +148,12 @@ function refreshClicked() {
             for(let i = 0; i < data.articles.length; i++) {
                 console.log(data.articles[i].source.name)
                 let currentArticle = data.articles[i]
-                $("#cardContainer").append(
-                    `
-                        <div class="card" style="width: 18rem;">
-                            <img src=${data.articles[i].image} class="card__img" alt="...">
-                            <div class="card-body">
-                                <h5 class="card__title">${data.articles[i].title}</h5>
-                                <p class="card__p">${data.articles[i].publishedAt}</p>
-                            </div>
-                        </div>
-                    `
-                );
+                generateNewsCard(data, i);
             }
 
         }
     });
 }
-
 
 function aboutClicked() {
     aboutSection.style.display = ("block");
